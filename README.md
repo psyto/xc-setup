@@ -3,8 +3,8 @@
 ## 🏆 Solana X402 Hackathon Submission: Best x402 Dev Tool
 
 **Category:** Best x402 Dev Tool  
-**Developer:** \[Your Name / Team Name]  
-**Solana Address:** \[Your Devnet/Mainnet Wallet Address]
+**Developer:** Hiroyuki Saito  
+**Solana Address:** _To be added - Replace with your Devnet or Mainnet wallet address_
 
 ---
 
@@ -91,8 +91,8 @@ Provides the necessary currency for testing on Solana Devnet.
 
 **What it does:**
 
--   **SOL Airdrop:** Automatically airdrops **2 SOL** to both the Payer and Facilitator wallets to cover transaction fees
--   **Token Airdrop:** Creates a test token mint and airdrops **1000 test tokens** to the Agent/Payer wallet, making it ready for immediate spending
+-   **SOL Airdrop:** Automatically airdrops **0.5 SOL** to both the Payer and Facilitator wallets to cover transaction fees (reduced to avoid Devnet rate limits)
+-   **Token Airdrop:** Creates a test token mint and airdrops **100 test tokens** to the Agent/Payer wallet, making it ready for immediate spending
 -   **Configuration Update:** Automatically updates `.env` with the test token mint address
 
 **Usage:**
@@ -112,18 +112,18 @@ xc-setup fund
 ```
 💰 Funding test wallets...
 
-💸 Airdropping 2 SOL to Payer...
+💸 Airdropping 0.5 SOL to Payer...
 ✅ Payer funded: <address>
    Tx: <transaction-signature>
 
-💸 Airdropping 2 SOL to Facilitator...
+💸 Airdropping 0.5 SOL to Facilitator...
 ✅ Facilitator funded: <address>
    Tx: <transaction-signature>
 
 🪙 Creating test token...
 ✅ Test token mint created: <mint-address>
 
-💸 Minting 1000 test tokens to Payer...
+💸 Minting 100 test tokens to Payer...
 ✅ Test tokens minted to Payer
 
 🎉 All wallets funded successfully!
@@ -157,14 +157,14 @@ xc-setup test
 🧪 Testing x402 payment flow...
 
 Checking wallet balances...
-Payer balance: 2.0 SOL
-Facilitator balance: 2.0 SOL
+Payer balance: 0.5 SOL
+Facilitator balance: 0.5 SOL
 
 💳 Executing test payment...
 ✅ Payment successful!
    Tx: <transaction-signature>
 
-✅ Token balance verified: 1000 tokens
+✅ Token balance verified: 100 tokens
 
 🎉 All tests passed! Your x402 setup is ready to use.
 ```
@@ -191,7 +191,7 @@ npm install -g xc-setup
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/psyto/xc-setup.git
 cd xc-setup
 
 # Install dependencies
@@ -288,6 +288,7 @@ TEST_TOKEN_MINT=<test-token-mint-address>
 ### Using Environment Variables in Your Code
 
 ```javascript
+const { Connection } = require("@solana/web3.js");
 require("dotenv").config();
 
 const payerPublicKey = process.env.PAYER_PUBLIC_KEY;
