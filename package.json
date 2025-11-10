@@ -1,42 +1,41 @@
 {
-  "name": "xc-setup",
-  "version": "1.0.0",
-  "description": "CLI tool for zero-friction x402 project setup on Solana",
-  "main": "dist/index.js",
-  "bin": {
-    "xc-setup": "dist/cli.js"
-  },
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/cli.js",
-    "dev": "ts-node src/cli.ts",
-    "prepublishOnly": "npm run build"
-  },
-  "keywords": [
-    "solana",
-    "x402",
-    "cli",
-    "blockchain",
-    "dev-tools"
-  ],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@solana/web3.js": "^1.87.6",
-    "@solana/spl-token": "^0.3.9",
-    "commander": "^11.1.0",
-    "dotenv": "^16.3.1",
-    "fs-extra": "^11.2.0",
-    "chalk": "^4.1.2"
-  },
-  "devDependencies": {
-    "@types/node": "^20.10.6",
-    "@types/fs-extra": "^11.0.4",
-    "typescript": "^5.3.3",
-    "ts-node": "^10.9.2"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
+    "name": "xc-setup",
+    "version": "1.0.0",
+    "description": "CLI tool for zero-friction x402 project setup on Solana",
+    "main": "dist/index.js",
+    "bin": {
+        "xc-setup": "dist/cli.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/cli.js",
+        "dev": "ts-node src/cli.ts",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "solana",
+        "x402",
+        "cli",
+        "blockchain",
+        "dev-tools"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@solana/web3.js": "^1.87.6",
+        "@solana/spl-token": "^0.3.9",
+        "commander": "^11.1.0",
+        "dotenv": "^16.3.1",
+        "fs-extra": "^11.2.0",
+        "chalk": "^4.1.2"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.6",
+        "@types/fs-extra": "^11.0.4",
+        "typescript": "^5.3.3",
+        "ts-node": "^10.9.2"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
 }
-
