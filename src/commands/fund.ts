@@ -9,7 +9,7 @@ import {
 import chalk from "chalk";
 import { loadKeypair } from "../utils/keypair";
 
-const DEVNET_RPC = "https://api.devnet.solana.com";
+const DEVNET_RPC = process.env.SOLANA_RPC_URL || "https://api.devnet.solana.com";
 const AIRDROP_AMOUNT_SOL = 0.5; // 0.5 SOL for fees (reduced to avoid rate limits)
 const TEST_TOKEN_AMOUNT = 100; // 100 test tokens (reduced for testing)
 

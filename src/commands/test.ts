@@ -11,7 +11,7 @@ import { getAssociatedTokenAddress, getAccount } from "@solana/spl-token";
 import chalk from "chalk";
 import { loadKeypair } from "../utils/keypair";
 
-const DEVNET_RPC = "https://api.devnet.solana.com";
+const DEVNET_RPC = process.env.SOLANA_RPC_URL || "https://api.devnet.solana.com";
 
 export async function testCommand(): Promise<void> {
     console.log(chalk.blue("🧪 Testing x402 payment flow...\n"));

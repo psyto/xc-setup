@@ -2,7 +2,7 @@ import { Keypair, Connection, PublicKey } from '@solana/web3.js';
 import { execSync } from 'child_process';
 import chalk from 'chalk';
 
-const DEVNET_RPC = 'https://api.devnet.solana.com';
+const DEVNET_RPC = process.env.SOLANA_RPC_URL || 'https://api.devnet.solana.com';
 
 /**
  * Deploy facilitator program to Solana Devnet
